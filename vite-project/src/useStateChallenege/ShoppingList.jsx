@@ -7,15 +7,26 @@ const ShoppingList = () => {
         {id: 2, product: "Pendrive", quantity: 6},
     ])
 
-    const addItem = () => setItems([...items, {id: 3, product: "Pen", quantity: 5}])
+    const [inputProduct, setProduct] = useState("")
+    const [inputQuantity, setQuantity] = useState("")
+
+    const handleProductChange = (e) => setProduct(e.target.value)
+    const handleQuantityChange = (e) => setQuantity(e.target.value)
+
+    const addItem = () => setItems([...items, {id: Math.random, product: inputProduct, quantity: inputQuantity}])
 
   return (
     <div>
         <h1>Shopping List</h1>
         {items.map((item) => (
-            <li key={item.id} >{item.product}</li>
+            <ul>
+                <li key={item.id} >{item.product}</li>
+                <li key={item.id}> {item.quantity}</li>
+            </ul>
         ))}
         <br />
+        <input type="text" placeholder='Enter product' onChange={handleProductChange} />
+        <input type="text" placeholder='Enter quantity' onChange={handleQuantityChange}/>
         <button onClick={addItem}>Add item</button>
     </div>
   )
