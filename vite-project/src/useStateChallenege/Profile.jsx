@@ -10,6 +10,7 @@ const Profile = () => {
 
   return (
     <div>
+        <h1>Profile</h1>
         <h4>Name: {user.name}</h4>
         <h4>Age: {user.age}</h4>
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Counter from './useStateChallenege/Counter'
 import TodoList from './useStateChallenege/TodoList'
 import Profile from './useStateChallenege/Profile'
+import ShoppingList from './useStateChallenege/ShoppingList'
 
 const App = () => {
 
@@ -9,8 +10,8 @@ const App = () => {
    <section>
       <Counter />
       <TodoList />
-      <br />
       <Profile />
+      <ShoppingList />
    </section>
   ) 
 }
